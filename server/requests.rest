@@ -1,0 +1,7 @@
+POST http://localhost:3000/resposta
+Content-Type: application/json
+
+{
+  "email": "leo@leo.com",
+  "answer1": ""
+}
