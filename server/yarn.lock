@@ -866,6 +866,11 @@
   "resolved" "https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz"
   "version" "0.6.3"
 
+"net@^1.0.2":
+  "integrity" "sha1-0XV+yaf7I3HYPPR1XOPifhCCk4g="
+  "resolved" "https://registry.npmjs.org/net/-/net-1.0.2.tgz"
+  "version" "1.0.2"
+
 "node-addon-api@^4.2.0":
   "integrity" "sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ=="
   "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-4.3.0.tgz"

@@ -8,9 +8,8 @@ let errorCode = 500
 
   app.post("/resposta", async (req: Request, res: Response) => {
     try {
-      console.log(req.body)
       const data = req.body
-    if ((await checkEmail(data.email)) === false) {
+    if ((await checkEmail(data.email)) === false) { // only runs if the email used isn't on the database
       const newAnswer = Answers.build({
         email: data.email,
         answer1: data.answer1,

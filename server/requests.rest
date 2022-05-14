@@ -2,6 +2,11 @@ POST http://localhost:3000/resposta
 Content-Type: application/json
 
 {
-  "email": "leo@leo.com",
-  "answer1": ""
+  "email": "leorigotto@leorigotto.com",
+  "answer1": "4 até 6",
+  "answer2": "10"
 }
+
+###
+
+GET http://localhost:3000/email?email=leo@lefdasfo.com

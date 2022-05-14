@@ -10,8 +10,15 @@ const port = 3000;
 exports.app = (0, express_1.default)();
 function startServer() {
     (0, sequelize_1.checkDBConnection)();
-    exports.app.listen(port, () => {
-        console.log(`App running on port ${port}`);
+    exports.app.use(express_1.default.json());
+    const server = exports.app.listen(port || 3000, () => {
+        if (server) {
+            const address = server.address();
+            console.log(`Server is running in http://localhost:${address.port}`);
+        }
+        else {
+            console.error(`Failure upon starting server.`);
+        }
     });
 }
 exports.startServer = startServer;

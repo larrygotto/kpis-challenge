@@ -1,5 +1,8 @@
 import { startServer } from "./configs/app";
 import { Answers } from "./models/answer";
+import { getUsedMail } from "./services/checkEmail";
+import { getAnswer1 } from "./services/getAnswer1";
+import { getAnswer2 } from "./services/getAnswer2";
 import { postAnswer } from "./services/postAnswer";
 
 async function runServer():Promise<void> {
@@ -9,5 +12,8 @@ async function runServer():Promise<void> {
 
 runServer()
 
-// services
+// run services
+getUsedMail()
 postAnswer()
+getAnswer1()
+getAnswer2()

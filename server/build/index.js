@@ -11,6 +11,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = require("./configs/app");
 const answer_1 = require("./models/answer");
+const checkEmail_1 = require("./services/checkEmail");
+const getAnswer1_1 = require("./services/getAnswer1");
+const getAnswer2_1 = require("./services/getAnswer2");
 const postAnswer_1 = require("./services/postAnswer");
 function runServer() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -19,5 +22,8 @@ function runServer() {
     });
 }
 runServer();
-// services
+// run services
+(0, checkEmail_1.getUsedMail)();
 (0, postAnswer_1.postAnswer)();
+(0, getAnswer1_1.getAnswer1)();
+(0, getAnswer2_1.getAnswer2)();

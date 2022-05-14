@@ -9,33 +9,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getUsedMail = exports.checkEmail = void 0;
+exports.getAnswer1 = void 0;
 const app_1 = require("../configs/app");
 const answer_1 = require("../models/answer");
-function checkEmail(email) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const check = yield answer_1.Answers.findAll({ where: { email: email } }).then((res) => {
-            return res.length > 0 ? true : false;
-        });
-        return check;
-    });
-}
-exports.checkEmail = checkEmail;
-function getUsedMail() {
-    app_1.app.get('/email', (req, res) => __awaiter(this, void 0, void 0, function* () {
-        let errorCode = 500;
+function getAnswer1() {
+    app_1.app.get("/resposta1", (req, res) => __awaiter(this, void 0, void 0, function* () {
         try {
-            if ((yield checkEmail(req.query.email)) === false) {
-                res.send({ message: "Email ainda não cadastrado", check: false });
-            }
-            else {
-                errorCode = 400;
-                throw new Error('Email já cadastrado');
-            }
+            const rawData = yield answer_1.Answers.findAll({ attributes: ["answer1"] });
+            const data = rawData.map((i) => {
+                return i.answer1;
+            });
+            let averages = {};
+            data.forEach((x) => (averages[x] = (averages[x] || 0) + 1)); // calculates the average for each answer
+            res.send(averages);
         }
         catch (error) {
-            res.status(errorCode).send({ message: error.message, check: true });
+            res.send(error.message);
         }
     }));
 }
-exports.getUsedMail = getUsedMail;
+exports.getAnswer1 = getAnswer1;

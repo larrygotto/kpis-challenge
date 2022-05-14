@@ -17,9 +17,8 @@ function postAnswer() {
     let errorCode = 500;
     app_1.app.post("/resposta", (req, res) => __awaiter(this, void 0, void 0, function* () {
         try {
-            console.log(req.body);
             const data = req.body;
-            if ((yield (0, checkEmail_1.checkEmail)(data.email)) === false) {
+            if ((yield (0, checkEmail_1.checkEmail)(data.email)) === false) { // only runs if the email used isn't on the database
                 const newAnswer = answer_1.Answers.build({
                     email: data.email,
                     answer1: data.answer1,
