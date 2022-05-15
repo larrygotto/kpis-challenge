@@ -13,14 +13,14 @@ exports.getAnswer1 = void 0;
 const app_1 = require("../configs/app");
 const answer_1 = require("../models/answer");
 function getAnswer1() {
-    app_1.app.get("/resposta1", (req, res) => __awaiter(this, void 0, void 0, function* () {
+    app_1.app.get("/answer/1", (req, res) => __awaiter(this, void 0, void 0, function* () {
         try {
             const rawData = yield answer_1.Answers.findAll({ attributes: ["answer1"] });
             const data = rawData.map((i) => {
                 return i.answer1;
             });
             let averages = {};
-            data.forEach((x) => (averages[x] = (averages[x] || 0) + 1)); // calculates the average for each answer
+            data.forEach((item) => (averages[item] = (averages[item] || 0) + 1)); // calculates the average for each answer
             res.send(averages);
         }
         catch (error) {

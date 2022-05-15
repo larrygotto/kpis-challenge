@@ -2,7 +2,7 @@ import { app } from "../configs/app";
 import { Answers } from "../models/answer";
 
 export async function checkEmail(email: string):Promise<boolean> {
-    const check = await Answers.findAll({where: {email: email}}).then((res) => {
+    const check = await Answers.findAll({where: {email: email}}).then((res: any) => {
       return res.length > 0 ? true : false
     })
     return check

@@ -16,7 +16,21 @@ exports.checkDBConnection = exports.sequelize = void 0;
 const sequelize_1 = require("sequelize");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-exports.sequelize = new sequelize_1.Sequelize(`${process.env.DATABASE_URL}`);
+// export const sequelize = new Sequelize(`${process.env.DATABASE_URL}`)
+exports.sequelize = new sequelize_1.Sequelize({
+    database: "d8r01029jqa7u5",
+    username: "zhmawrzwsxdlso",
+    password: "970e07b3099abd263fcfaede8cab0a6d341df2c717f923f0eaf406784c57fbcc",
+    host: "ec2-34-236-94-53.compute-1.amazonaws.com",
+    port: 5432,
+    dialect: "postgres",
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false,
+        },
+    },
+});
 const checkDBConnection = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield exports.sequelize.authenticate();

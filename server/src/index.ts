@@ -7,7 +7,7 @@ import { postAnswer } from "./services/postAnswer";
 
 async function runServer():Promise<void> {
   startServer()
-  await Answers.sync().then(() => console.log('Model syncronized successfully')).catch((err) => console.error(err))
+  await Answers.sync().then(() => console.log('Model syncronized successfully')).catch((err: any) => console.error(err))
 }
 
 runServer()
