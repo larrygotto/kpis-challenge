@@ -1,19 +1,20 @@
 import { createTheme } from '@mui/material/styles';
+import { mainColors } from './colors';
 
 export const theme = createTheme({
     palette: {
         primary: {
-            main: "",
+            main: mainColors.green,
         },
         secondary: {
-            main: "",
-            contrastText: "",
+            main: mainColors.pink,
+            contrastText: "#FFFFFF",
         },
         error: {
-            main: "",
+            main: "#8D0028",
         },
         success: {
-            main: "",
+            main: "#017531",
         },
     },
 }); 

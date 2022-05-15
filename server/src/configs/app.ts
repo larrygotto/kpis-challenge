@@ -1,6 +1,7 @@
 import express, { Express } from "express";
 import { AddressInfo } from "net";
 import { checkDBConnection} from "./sequelize";
+import cors from "cors";
 
 const port = 3000
 
@@ -10,6 +11,7 @@ export function startServer() {
   checkDBConnection()
 
   app.use(express.json());
+  app.use(cors())
   
   const server = app.listen(port || 3000, () => {
       if (server) {

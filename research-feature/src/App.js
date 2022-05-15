@@ -12,7 +12,6 @@ export default function App() {
       <GlobalState>
         <ThemeProvider theme={theme}>
           <BrowserRouter>
-          aaaaaa
             <Router/>
           </BrowserRouter>
         </ThemeProvider>

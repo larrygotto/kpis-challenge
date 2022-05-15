@@ -10,15 +10,13 @@ export async function checkEmail(email: string):Promise<boolean> {
 
 export function getUsedMail(): void {
   app.get('/email', async (req, res) => {
-    let errorCode = 500
     try {
     if (await checkEmail(req.query.email as string) === false){
       res.send({message: "Email ainda não cadastrado", check: false})
     } else {
-      errorCode = 400
-      throw new Error('Email já cadastrado')}
+      res.send({message: "Email já cadastrado", check: true})}
     } catch (error: any) {
-      res.status(errorCode).send({message: error.message, check: true})
+      res.send({message: error.message, check: true})
     }
   })
 }

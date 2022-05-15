@@ -29,8 +29,7 @@ function getUsedMail() {
                 res.send({ message: "Email ainda não cadastrado", check: false });
             }
             else {
-                errorCode = 400;
-                throw new Error('Email já cadastrado');
+                res.send({ message: "Email já cadastrado", check: true });
             }
         }
         catch (error) {
