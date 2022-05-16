@@ -34,7 +34,7 @@ Para rodar o projeto execute os comandos abaixo no seu terminal:
 Para clonar o projeto 
 `git clone https://github.com/larrygotto/kpis-challenge.git`
 
-Para rodar o back-end entre na pasta do projeto "ph-team25" e execute:
+Para rodar o back-end entre na pasta do projeto e execute:
 
 * `cd server`
 * `npm install`
