@@ -1,12 +1,10 @@
 # KPIs Challenge - Research Feature
 
-Projeto para o case de seleção da KPIs. Na plataforma, você consegue responder perguntas de clima e visualizar o compilado geral das respostas. Todas as respostas são vinculados a um email específico. Identidade visual baseada na companhia Natura &co, atual cliente da KPIs.
-O backend foi criado usando Node.js, Typescript e PostgreSQL, com o apoio das tecnologias Express.js, Docker e Sequelize. O deploy do backend, tanto o banco de dados como a API, foi feito no Heroku e está rodando como esperado.
-O frontend foi criado usando React.js, com apoio das bibliotecas MUI e Styled Components para estilização, e Nivo.Rocks para visualização de dados em charts. O deploy do frontend foi feito usando o Surge.
-Foi um desafio muito enriquecedor: pude desenvolver conhecimentos em PostgreSQL, que ainda não tinha tido contato, e aprofundar meus conhecimentos nas bibliotecas sugeridas.
-Por conta do deadline, alguns recursos extras ficaram faltando: 
-- um chart que une as duas informações da pesquisa e traz uma análise relacional; 
-- uma funcionalidade para enviar os resultados como PDF no email do respondente (essa feature já está em andamento).
+- Projeto para o case de seleção da KPIs. Na plataforma, você consegue responder perguntas de clima e visualizar o compilado geral das respostas. Todas as respostas são vinculados a um email específico. Identidade visual baseada na companhia Natura &co, atual cliente da KPIs.
+- O backend foi criado usando Node.js, Typescript e PostgreSQL, com o apoio das tecnologias Express.js, Docker e Sequelize. O deploy do backend, tanto o banco de dados como a API, foi feito no Heroku e está rodando como esperado.
+- O frontend foi criado usando React.js, com apoio das bibliotecas MUI e Styled Components para estilização, e Nivo.Rocks para visualização de dados em charts. O deploy do frontend foi feito usando o Surge.
+- Foi um desafio muito enriquecedor: pude desenvolver conhecimentos em PostgreSQL, que ainda não tinha tido contato, e aprofundar meus conhecimentos nas bibliotecas sugeridas.
+- Por conta do deadline, alguns recursos extras ficaram faltando: um chart que une as duas informações da pesquisa e traz uma análise relacional; uma funcionalidade para enviar os resultados como PDF no email do respondente (essa feature já está em andamento)
 
 
 # 🧑🏼‍💻 Deploy
