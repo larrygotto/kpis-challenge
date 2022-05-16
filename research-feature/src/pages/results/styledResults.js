@@ -36,6 +36,7 @@ export const PageContainer = styled.div`
     align-items: center;
     height: 40vh;
     padding-bottom: 38px;
+    text-align: center;
     p{
       margin: 12px 0;
     }

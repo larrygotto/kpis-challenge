@@ -15,7 +15,7 @@ export default function App() {
           <BrowserRouter>
             <img
               src={logo}
-              alt="natura logo"
+              alt="natura andco logo"
               style={{ width: "100px", margin: "16px", position: "absolute" }}
             />
             <Router />
