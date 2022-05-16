@@ -1,3 +1,8 @@
+// This is an attempt to implement PDF sending to user email.
+// Since I've reached the deadline, this feature won't be on the MVP,
+// but it should be developed in the future if needed.
+// @larrygotto
+
 import fs from "fs"
 import pdf from "html-pdf"
 

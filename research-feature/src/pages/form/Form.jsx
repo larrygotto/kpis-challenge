@@ -15,7 +15,7 @@ export default function Form() {
   const [stage, setStage] = useState(1)
   const [answers, setAnswers] = useState({
     answer1: "1 até 3",
-    answer2: "1",
+    answer2: "5",
   })
   const [buttonText, setButtonText] = useState("Enviar")
   const form = { email: states.email, ...answers }
@@ -64,6 +64,7 @@ export default function Form() {
           onClickBack={() => setStage(1)}
           onClickSend={() => handleSendForm()}
           buttonText={buttonText}
+          answer={answers.answer2}
           selected={answers.answer2}
         />
       )

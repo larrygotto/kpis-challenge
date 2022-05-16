@@ -5,6 +5,7 @@ import { theme } from "./constants/theme"
 import GlobalState from "./global/GlobalState"
 import Router from "./routes/router"
 import "./styles.css"
+import logo from "./assets/naturaandco.svg"
 
 export default function App() {
   return (
@@ -12,7 +13,12 @@ export default function App() {
       <GlobalState>
         <ThemeProvider theme={theme}>
           <BrowserRouter>
-            <Router/>
+            <img
+              src={logo}
+              alt="natura logo"
+              style={{ width: "100px", margin: "16px", position: "absolute" }}
+            />
+            <Router />
           </BrowserRouter>
         </ThemeProvider>
       </GlobalState>

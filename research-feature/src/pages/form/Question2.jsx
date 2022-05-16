@@ -37,6 +37,7 @@ export default function Question2(props) {
         <Button variant="contained" onClick={props.onClickBack}>
           Voltar
         </Button>
+        <h2>Sua resposta: {props.answer}</h2>
         <Button variant="contained" onClick={props.onClickSend}>
           {props.buttonText}
         </Button>

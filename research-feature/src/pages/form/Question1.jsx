@@ -7,7 +7,7 @@ import { ButtonContainer, QuestionContainer } from "./styledForm"
 export default function Question1(props) {
   return (
     <QuestionContainer>
-      <h1>Quantas pessoas tem a sua equipe?</h1>
+      <h1>1 - Quantas pessoas tem a sua equipe?</h1>
       <SelectionSlider marks={teamSelection} onChange={props.onChange} />
       <ButtonContainer>
         <Button variant="contained" onClick={props.onClickBack}>
