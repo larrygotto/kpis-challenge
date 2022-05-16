@@ -11,18 +11,18 @@ export default function Homepage() {
   const { states, setters } = useContext(GlobalStateContext)
   const [unauthorize, setUnauthorize] = useState(false)
   const navigate = useNavigate()
-  const [buttonText, setButtonText] = useState("iniciar")
+  const [buttonText, setButtonText] = useState("Iniciar pesquisa")
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setButtonText(<Loading/>)
+    setButtonText(<Loading />)
     axios
       .get(`${BASE_URL}/email?email=${states.email}`)
       .then((res) => {
         const check = res.data.check
         if (check) {
           setUnauthorize(true)
-          setButtonText("Iniciar")
+          setButtonText("Iniciar pesquisa")
         } else if (!check) {
           navigate("/form")
         }
@@ -34,8 +34,19 @@ export default function Homepage() {
     <HomeContainer>
       <FormContainer type="submit" onSubmit={(e) => handleSubmit(e)}>
         <h1>Boas vindas!</h1>
-        <h2>Agradecemos o seu tempo</h2>
-        <p>Digite seu email para continuar</p>
+        <h2>Agradecemos por querer participar</h2>
+
+        {unauthorize ? (
+          <p>Já temos uma resposta enviada por esse email</p>
+        ) : (
+          <></>
+        )}
+        <p>
+          {unauthorize
+            ? "Digite outro email para continuar"
+            : "Digite seu email para continuar"}
+        </p>
+
         <TextField
           error={unauthorize}
           label="email"
@@ -46,11 +57,11 @@ export default function Homepage() {
             setters.setEmail(e.target.value)
           }}
         />
-        {unauthorize ? <p>Já temos uma resposta enviada por esse email</p> : <></>}
+
         <Button
           type="submit"
           onSubmit={(e) => handleSubmit()}
-          disabled={states.email ? false : true}
+          disabled={states.email.length > 4 ? false : true}
           variant="contained"
         >
           {buttonText}

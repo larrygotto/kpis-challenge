@@ -22,6 +22,6 @@ const LoadingContainer = styled.div`
 
 export default function Loading() {
   return (
-    <LoadingContainer><img src={naturaLogo}/> </LoadingContainer>
+    <LoadingContainer><img src={naturaLogo} alt="carregando..."/> </LoadingContainer>
   )
 }
