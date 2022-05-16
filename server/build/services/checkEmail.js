@@ -23,7 +23,6 @@ function checkEmail(email) {
 exports.checkEmail = checkEmail;
 function getUsedMail() {
     app_1.app.get('/email', (req, res) => __awaiter(this, void 0, void 0, function* () {
-        let errorCode = 500;
         try {
             if ((yield checkEmail(req.query.email)) === false) {
                 res.send({ message: "Email ainda não cadastrado", check: false });
@@ -33,7 +32,7 @@ function getUsedMail() {
             }
         }
         catch (error) {
-            res.status(errorCode).send({ message: error.message, check: true });
+            res.send({ message: error.message, check: true });
         }
     }));
 }
