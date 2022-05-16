@@ -1,7 +1,5 @@
 import { Button } from "@mui/material"
 import React from "react"
-import SelectionSlider from "../../components/selection-slider/SelectionSlider"
-import { teamSelection } from "../../constants/teamSelection"
 import {
   ButtonContainer,
   LabelContainer,
@@ -30,9 +28,7 @@ export default function Question2(props) {
   return (
     <QuestionContainer>
       <h1>Qual a sua satisfação com a Natura &co?</h1>
-      <SelectionContainer>
-        {options}
-      </SelectionContainer>
+      <SelectionContainer>{options}</SelectionContainer>
       <LabelContainer>
         <p>Pouca satisfação</p>
         <p>Muita satisfação</p>
@@ -42,7 +38,7 @@ export default function Question2(props) {
           Voltar
         </Button>
         <Button variant="contained" onClick={props.onClickSend}>
-          Enviar
+          {props.buttonText}
         </Button>
       </ButtonContainer>
     </QuestionContainer>

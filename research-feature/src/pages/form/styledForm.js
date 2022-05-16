@@ -35,7 +35,6 @@ export const SelectItem = styled.button`
   }
   :active{
     background-color: gray;
-    color: white;
   }
 `
 
