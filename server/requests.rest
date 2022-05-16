@@ -9,4 +9,4 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/answer/1
+GET http://localhost:3000/answer/2
