@@ -9,16 +9,19 @@ import { PageContainer, QuestionContainer } from "./styledForm"
 
 export default function Form() {
   const { states, setters } = useContext(GlobalStateContext)
-  const [stage, setStage] = useState(2)
+  const [stage, setStage] = useState(1)
   const [answers, setAnswers] = useState({
     answer1: "1 até 3",
     answer2: "1",
   })
+  const form = {email: states.email, ...answers}
+
+  console.log(form)
 
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!states.email) navigate('/')
+    if (!states.email) navigate("/")
   }, [])
 
   let questions
@@ -34,7 +37,13 @@ export default function Form() {
       )
       break
     case 2:
-      questions = <Question2 onClickBack={() => setStage(1)}/>
+      questions = (
+        <Question2
+          onClick={(e) => setAnswers({ ...answers, answer2: e.target.value })}
+          onClickBack={() => setStage(1)}
+          selected={answers.answer2}
+        />
+      )
       break
     default:
       questions = (
