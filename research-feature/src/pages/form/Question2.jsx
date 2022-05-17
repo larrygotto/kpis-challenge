@@ -27,7 +27,7 @@ export default function Question2(props) {
 
   return (
     <QuestionContainer>
-      <h1>Qual a sua satisfação com a Natura &co?</h1>
+      <h1>2 - Qual a sua satisfação com a Natura &co?</h1>
       <SelectionContainer>{options}</SelectionContainer>
       <LabelContainer>
         <p>Pouca satisfação</p>
